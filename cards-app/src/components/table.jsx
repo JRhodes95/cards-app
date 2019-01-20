@@ -5,7 +5,6 @@ import Hand from "./hand";
 import generateDeck from "../utils/generateDeck";
 import shuffleArray from "../utils/shuffleArray";
 import drawItems from "../utils/drawItems";
-import DrawInput from "./drawInput";
 
 class Table extends Component {
   state = { deck: generateDeck(), hand: [], noCards: 1 };
@@ -47,29 +46,20 @@ class Table extends Component {
       <React.Fragment>
         <div className="container">
           <div className="row">
+            <div className="col" />
+            <div className="col" />
+          </div>
+          <div className="row">
             <div className="col">
-              <button
-                className="btn btn-primary"
-                onClick={() => this.handleShuffle()}
-              >
-                Shuffle Deck
-              </button>
+              <Deck cards={this.state.deck} onShuffle={this.handleShuffle} />
             </div>
             <div className="col">
-              <DrawInput
-                noCards={this.state.noCards}
+              <Hand
+                cards={this.state.hand}
                 onChange={this.handleChange}
                 onDraw={this.handleDraw}
                 onSort={this.handleSort}
               />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <Deck cards={this.state.deck} />
-            </div>
-            <div className="col">
-              <Hand cards={this.state.hand} />
             </div>
           </div>
         </div>

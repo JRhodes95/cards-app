@@ -4,7 +4,8 @@ const Header = () => {
     <React.Fragment>
       <div className="container">
         <div className="row">
-          <h1 className="text-center">Deck of Cards App</h1>
+          <h1 className="text-center display-3">Deck of Cards App</h1>
+          <hr />
         </div>
       </div>
     </React.Fragment>
