@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import "./App.css";
 import Table from "./components/table";
+import Header from "./components/header";
 
 class App extends Component {
   state = {};
 
   render() {
-    return <Table />;
+    return (
+      <React.Fragment>
+        <Header />
+        <Table />
+      </React.Fragment>
+    );
   }
 }
 

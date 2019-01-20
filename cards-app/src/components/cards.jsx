@@ -5,7 +5,7 @@ const Cards = props => {
   const { cards } = props;
   return (
     <React.Fragment>
-      <table className="table table-dark">
+      <table className="table">
         <thead>
           <tr>
             <th>Value</th>

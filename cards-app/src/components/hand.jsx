@@ -5,7 +5,11 @@ const Deck = props => {
   const { cards } = props;
   return (
     <React.Fragment>
-      <Cards cards={cards} />
+      {cards.length > 0 ? (
+        <Cards cards={cards} />
+      ) : (
+        <h3>No cards to show, draw cards from the deck!</h3>
+      )}
     </React.Fragment>
   );
 };

@@ -12,7 +12,7 @@ class Table extends Component {
 
   handleShuffle = () => {
     let { deck } = this.state;
-    this.setState(shuffleArray(deck));
+    this.setState({ deck: shuffleArray(deck) });
   };
 
   handleDraw = () => {
@@ -45,7 +45,7 @@ class Table extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="col">
               <button
