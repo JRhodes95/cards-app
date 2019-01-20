@@ -13,7 +13,7 @@ describe("drawItems", () => {
 
   it("should return a result of length n specified by caller", () => {
     let n = 2;
-    const { newData, result } = drawItems(testData, n);
+    const { result } = drawItems(testData, n);
     expect(result.length).toEqual(n);
   });
 
@@ -21,5 +21,12 @@ describe("drawItems", () => {
     let n = 2;
     const { newData } = drawItems(testData, n);
     expect(refData.length - newData.length).toEqual(n);
+  });
+
+  it("should return an error if n is longer than the array", () => {
+    let n = testData.length + 1;
+    expect(() => {
+      drawItems(testData, n);
+    }).toThrow("Error, cannot draw more items than exist in array.");
   });
 });
