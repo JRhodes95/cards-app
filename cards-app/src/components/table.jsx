@@ -55,6 +55,7 @@ class Table extends Component {
             </div>
             <div className="col">
               <Hand
+                noCards={this.state.noCards}
                 cards={this.state.hand}
                 onChange={this.handleChange}
                 onDraw={this.handleDraw}

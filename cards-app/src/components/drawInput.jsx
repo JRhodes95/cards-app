@@ -3,12 +3,14 @@ import React from "react";
 const DrawInput = props => {
   return (
     <React.Fragment>
-      <label for="noCards">How many cards would you like to draw?</label>
+      <label htmlFor="noCards">How many cards would you like to draw?</label>
       <div className="input-group">
         <input
+          className="border"
           onChange={props.onChange}
           type="text"
           value={props.noCards}
+          placeholder=""
           id="noCards"
         />
         <button className="btn btn-primary" onClick={props.onDraw}>
