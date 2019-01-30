@@ -6,9 +6,9 @@ const Deck = props => {
   return (
     <React.Fragment>
       <h2>Deck</h2>
-
       {cards.length > 0 ? (
         <div>
+          <p>There are currently {cards.length} cards in the deck.</p>
           <button className="btn btn-primary" onClick={props.onShuffle}>
             <i className="fas fa-random" /> Shuffle Deck
           </button>
