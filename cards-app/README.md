@@ -1,3 +1,9 @@
+This app was created by Jack Rhodes/UK/IBM as a solution to the IBM iX Deck of Cards test.
+
+It is built using React, and uses Jest for unit testing of utility functions.
+
+Please see the information below for the test, build, and run instructions.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
